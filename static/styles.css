@@ -1,12 +1,24 @@
 body { 
-    font-family: Roboto, sans-serif; 
+    font-family: sans-serif; 
     display: grid; 
-    place-items: center; 
-    min-height: 90vh; 
+    place-items: center;
     background-color: #f4f7f6; 
 }
+header {
+    margin: 20px auto;
+    padding: 0 0 6px 0;
+}
+header a {
+    text-decoration: none;
+    color: #090909;
+    padding: 16px;
+}
+header a:hover {
+    border-bottom: solid 2px #0056b3;
+}
 .container { 
-    background: #fff; 
+    background: #fff;
+    margin-top: 20vh;
     padding: 2rem 3rem; 
     border-radius: 12px; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.1); 

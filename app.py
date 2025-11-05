@@ -1,6 +1,6 @@
 # ==== IMPORTS ====
 from flask import Flask, render_template, jsonify
-import mqtt
+import mosquitto as mqtt
 import json
 import threading
 # ==== VARIABLES ====
