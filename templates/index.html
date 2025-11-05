@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESP32 Sensor Readings</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; display: grid; place-items: center; min-height: 90vh; background-color: #f4f7f6; }
-        .container { background: #fff; padding: 2rem 3rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        .reading { font-size: 2.5rem; color: #0056b3; font-weight: bold; }
-        .label { font-size: 1.2rem; color: #555; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Sensor Dashboard</h1>
-        <p>
-            <span class="label">Temperature:</span>
-            <span class="reading" id="temp">...</span>
-            <span class="label">&deg;C</span>
-        </p>
-        <p>
-            <span class="label">Humidity:</span>
-            <span class="reading" id="hum">...</span>
-            <span class="label">%</span>
-        </p>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>sensor readings</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sensor Dashboard</h1>
+            <p>
+                <span class="label">Temperature:</span>
+                <span class="reading" id="temp">...</span>
+                <span class="label">&deg;C</span>
+            </p>
+            <p>
+                <span class="label">Humidity:</span>
+                <span class="reading" id="hum">...</span>
+                <span class="label">%</span>
+            </p>
+        </div>
 
-    <script>
-        function updateReadings() {
-            fetch('/data')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('temp').innerText = data.temperature;
-                    document.getElementById('hum').innerText = data.humidity;
-                })
-        }
-        updateReadings();
-        setInterval(updateReadings, 3000);
-    </script>
-</body>
+        <script>
+            function updateReadings() {
+                fetch('/data')
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('temp').innerText = data.temperature;
+                        document.getElementById('hum').innerText = data.humidity;
+                    })
+            }
+            updateReadings();
+            setInterval(updateReadings, 3000);
+        </script>
+    </body>
 </html>

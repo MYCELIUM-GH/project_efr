@@ -1,6 +1,6 @@
 # ==== IMPORTS ====
 from flask import Flask, render_template, jsonify
-import paho.mqtt.client as mqtt
+import mqtt
 import json
 import threading
 # ==== VARIABLES ====

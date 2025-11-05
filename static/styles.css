@@ -1,0 +1,25 @@
+body { 
+    font-family: Roboto, sans-serif; 
+    display: grid; 
+    place-items: center; 
+    min-height: 90vh; 
+    background-color: #f4f7f6; 
+}
+.container { 
+    background: #fff; 
+    padding: 2rem 3rem; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+h1 { 
+    color: #333; 
+}
+.reading { 
+    font-size: 2.5rem; 
+    color: #0056b3; 
+    font-weight: bold; 
+}
+.label { 
+    font-size: 1.2rem; 
+    color: #555; 
+}
