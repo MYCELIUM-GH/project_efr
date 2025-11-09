@@ -1,3 +1,8 @@
+# A part programme, which is connecting ESP32 to Flask server hosted on RPI and publish
+# topics with DHT11 sensor's readings where Flask app handles them and push to web page.
+#
+# =====================================================================================
+# Made by Oleh
 # ==== ==== ==== ==== IMPORTS ==== ==== ==== ====
 from flask import Flask, render_template, jsonify
 import paho.mqtt.client as mqtt
