@@ -15,6 +15,7 @@
             <a href="/notes">Notes</a>
             <a href="/vault">Personal</a>
         </header>
+        <section class="row">
         <div class="container">
             <span id="clock"></span>
             <script>
@@ -38,17 +39,17 @@
         <div class="container">
             <h1>DHT11 Sensor Readings</h1>
             <p>
-                <span class="label">Temperature:</span>
+                <span class="label">Temperature:</span><br>
                 <span class="reading" id="temp">...</span>
                 <span class="label">&deg;C</span>
             </p>
             <p>
-                <span class="label">Humidity:</span>
+                <span class="label">Humidity:</span><br>
                 <span class="reading" id="hum">...</span>
                 <span class="label">%</span>
             </p>
         </div>
-
+        </section>
         <script>
             function updateReadings() {
                 fetch('/data')

@@ -15,7 +15,7 @@ header {
     margin: auto;
     padding: 18px 0;
     background-color: #111111;
-    border-bottom: solid 1px #c8c8c8;
+    border-bottom: solid 1px #292929;
 }
 header a {
     text-decoration: none;
@@ -25,16 +25,26 @@ header a {
 header a:hover {
     border-bottom: solid 2px #0056b3;
 }
-#clock {
-    font-size: 4.5rem;
-    color: #f7f7f7;
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
 }
-.container { 
-    background: #111111;
-    margin: 8vh auto;
+.container {
+    background: #050505;
+    align-items: center;
+    display: flex;
+    height: 200px;
     padding: 2rem 3rem;
     border-radius: 12px; 
     box-shadow: 0 10px 25px rgba(1, 73, 254, 0.5); 
+}
+#clock {
+    font-size: 3.5rem;
+    color: #f7f7f7;
 }
 h1 { 
     color: #f7f7f7; 
@@ -43,8 +53,16 @@ h1 {
     font-size: 1.2rem; 
     color: #0056b3; 
     font-weight: bold; 
+    padding: 10px;
 }
 .label { 
-    font-size: 1.2rem; 
+    font-size: 1.2rem;
+    padding: 10px;
     color: #f9f9f9; 
+}
+@media screen and (max-width: 800px) {
+    .row {
+        flex-direction: column;
+    }
+    
 }
