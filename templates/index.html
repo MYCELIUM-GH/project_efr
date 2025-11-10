@@ -16,7 +16,27 @@
             <a href="/vault">Personal</a>
         </header>
         <div class="container">
-            <h1>Sensor Dashboard</h1>
+            <span id="clock"></span>
+            <script>
+                function startTime() {
+                    const today = new Date();
+                    let h = today.getHours();
+                    let m = today.getMinutes();
+                    let s = today.getSeconds();
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+                    setTimeout(startTime, 1000);
+                }
+                function checkTime(i) {
+                    if (i < 10) {i = "0" + i};
+                    return i;
+                }
+                window.onload = startTime;
+            </script>
+        </div>
+        <div class="container">
+            <h1>DHT11 Sensor Readings</h1>
             <p>
                 <span class="label">Temperature:</span>
                 <span class="reading" id="temp">...</span>
